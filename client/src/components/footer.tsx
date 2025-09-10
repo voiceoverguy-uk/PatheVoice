@@ -1,4 +1,6 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="py-12 bg-secondary border-t border-border">
       <div className="max-w-6xl mx-auto px-4">
@@ -63,7 +65,7 @@ export default function Footer() {
         <div className="film-strip my-8"></div>
         <div className="text-center text-muted-foreground font-serif">
           <p data-testid="footer-copyright">
-            &copy; 2024 Guy Harris - VoiceoverGuy. All rights reserved. | British Male Voiceover & Pathé News Voice specialist
+            &copy; {currentYear} Guy Harris - VoiceoverGuy. All rights reserved. | British Male Voiceover & Pathé News Voice specialist
           </p>
         </div>
       </div>
