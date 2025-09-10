@@ -50,7 +50,7 @@ export default function ContactSection() {
           <h2 className="font-newsreel text-4xl md:text-5xl mb-6 tracking-wider" data-testid="heading-contact">
             BOOK THE PATHÉ STYLE <span className="text-accent">VOICE TODAY!</span>
           </h2>
-          <p className="font-serif text-lg text-primary-foreground/80 max-w-2xl mx-auto" data-testid="text-contact-description">
+          <p className="font-body text-lg text-primary-foreground/80 max-w-2xl mx-auto" data-testid="text-contact-description">
             Send your script and notes and I'll come back with a quote and turnaround time. Usually within 24 hours.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function ContactSection() {
         <form className="max-w-2xl mx-auto" onSubmit={handleSubmit} data-testid="contact-form">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label className="block font-newsreel text-lg mb-2 tracking-wide" htmlFor="name" data-testid="label-name">
+              <label className="block font-serif text-lg mb-2 tracking-wide" htmlFor="name" data-testid="label-name">
                 YOUR NAME
               </label>
               <input 
@@ -74,7 +74,7 @@ export default function ContactSection() {
               />
             </div>
             <div>
-              <label className="block font-newsreel text-lg mb-2 tracking-wide" htmlFor="email" data-testid="label-email">
+              <label className="block font-serif text-lg mb-2 tracking-wide" htmlFor="email" data-testid="label-email">
                 EMAIL ADDRESS
               </label>
               <input 
@@ -92,7 +92,7 @@ export default function ContactSection() {
           </div>
           
           <div className="mb-6">
-            <label className="block font-newsreel text-lg mb-2 tracking-wide" htmlFor="project" data-testid="label-project">
+            <label className="block font-serif text-lg mb-2 tracking-wide" htmlFor="project" data-testid="label-project">
               PROJECT TYPE
             </label>
             <select 
@@ -114,7 +114,7 @@ export default function ContactSection() {
           </div>
           
           <div className="mb-8">
-            <label className="block font-newsreel text-lg mb-2 tracking-wide" htmlFor="message" data-testid="label-message">
+            <label className="block font-serif text-lg mb-2 tracking-wide" htmlFor="message" data-testid="label-message">
               SCRIPT & PROJECT DETAILS
             </label>
             <textarea 

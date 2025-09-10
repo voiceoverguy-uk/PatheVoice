@@ -28,28 +28,28 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => handleNavClick('#about')}
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
               data-testid="nav-about"
             >
               About
             </button>
             <button
               onClick={() => handleNavClick('#examples')}
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
               data-testid="nav-examples"
             >
               Examples
             </button>
             <button
               onClick={() => handleNavClick('#services')}
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
               data-testid="nav-services"
             >
               Services
             </button>
             <button
               onClick={() => handleNavClick('#contact')}
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
               data-testid="nav-contact"
             >
               Contact

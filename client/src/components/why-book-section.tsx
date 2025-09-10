@@ -35,10 +35,10 @@ export default function WhyBookSection() {
               <div className="w-16 h-16 mx-auto mb-4 bg-accent rounded-full flex items-center justify-center">
                 <span className="text-2xl" data-testid={`icon-${index}`}>{feature.icon}</span>
               </div>
-              <h3 className="font-newsreel text-xl mb-3 tracking-wide" data-testid={`title-${index}`}>
+              <h3 className="font-serif text-xl mb-3 tracking-wide" data-testid={`title-${index}`}>
                 {feature.title}
               </h3>
-              <p className="font-serif text-muted-foreground" data-testid={`description-${index}`}>
+              <p className="font-body text-muted-foreground" data-testid={`description-${index}`}>
                 {feature.description}
               </p>
             </div>

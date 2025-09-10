@@ -42,7 +42,7 @@ export default function FAQSection() {
           {faqs.map((faq, index) => (
             <div key={index} className="bg-card border border-border rounded-lg" data-testid={`faq-item-${index}`}>
               <button 
-                className="w-full p-6 text-left font-newsreel text-xl tracking-wide flex justify-between items-center hover:bg-secondary transition-colors"
+                className="w-full p-6 text-left font-serif text-xl tracking-wide flex justify-between items-center hover:bg-secondary transition-colors"
                 onClick={() => toggleFAQ(index)}
                 data-testid={`faq-button-${index}`}
               >
@@ -58,7 +58,7 @@ export default function FAQSection() {
               </button>
               {openIndex === index && (
                 <div className="p-6 pt-0" data-testid={`faq-content-${index}`}>
-                  <p className="font-serif text-muted-foreground">
+                  <p className="font-body text-muted-foreground">
                     {faq.answer.includes('VoiceoverGuy.co.uk') ? (
                       <>
                         Oh yes! For other character voices beyond the Pathé Voice, visit my main site homepage at{' '}
