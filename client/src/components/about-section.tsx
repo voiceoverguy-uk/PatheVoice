@@ -7,10 +7,10 @@ export default function AboutSection() {
             <h2 className="font-newsreel text-4xl md:text-5xl mb-6 tracking-wider" data-testid="heading-what-is-pathe">
               WHAT IS THE <span className="text-accent">PATHÉ NEWS</span> VOICE?
             </h2>
-            <p className="font-serif text-lg mb-6 text-muted-foreground leading-relaxed" data-testid="text-vintage-description">
+            <p className="font-body text-lg mb-6 text-muted-foreground leading-relaxed" data-testid="text-vintage-description">
               Think vintage cinema news: precise diction, lively pacing, and a cheerfully authoritative tone that carried headlines to UK audiences from the 1910s through the 1960s.
             </p>
-            <p className="font-serif text-lg text-muted-foreground leading-relaxed" data-testid="text-modern-usage">
+            <p className="font-body text-lg text-muted-foreground leading-relaxed" data-testid="text-modern-usage">
               Modern projects use this <strong>newsreel-style narration</strong> to grab attention and make messages memorable with that unmistakable cadence often associated with the golden age of British broadcasting.
             </p>
           </div>

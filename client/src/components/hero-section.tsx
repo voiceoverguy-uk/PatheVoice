@@ -25,7 +25,7 @@ export default function HeroSection() {
             </p>
           </div>
           
-          <p className="font-serif text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-description">
+          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-description">
             The Pathé newsreel style is instantly recognisable and brilliant for ads, documentaries, corporate events, games and social content. Authentic period flair meets broadcast-ready quality.
           </p>
           
