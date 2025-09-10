@@ -8,7 +8,7 @@ export default function Footer() {
               PATHÉ VOICE
             </h3>
             <p className="font-serif text-muted-foreground" data-testid="footer-description">
-              Authentic British newsreel voice for modern projects
+              Professional British male voiceover - Authentic newsreel voice for modern projects
             </p>
           </div>
           <div>
@@ -53,7 +53,7 @@ export default function Footer() {
               CONNECT
             </h4>
             <p className="font-serif text-muted-foreground mb-2" data-testid="footer-services">
-              Professional voiceover services
+              British male voiceover services
             </p>
             <p className="font-serif text-muted-foreground" data-testid="footer-turnaround">
               Same-day turnaround available
@@ -63,7 +63,7 @@ export default function Footer() {
         <div className="film-strip my-8"></div>
         <div className="text-center text-muted-foreground font-serif">
           <p data-testid="footer-copyright">
-            &copy; 2024 Guy Harris - VoiceoverGuy. All rights reserved. | Authentic Pathé News Voice specialist
+            &copy; 2024 Guy Harris - VoiceoverGuy. All rights reserved. | British Male Voiceover & Pathé News Voice specialist
           </p>
         </div>
       </div>

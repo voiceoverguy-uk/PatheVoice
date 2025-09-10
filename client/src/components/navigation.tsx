@@ -61,7 +61,7 @@ export default function Navigation() {
               rel="noopener noreferrer"
               data-testid="nav-main-site"
             >
-              Main Site
+              Main VoiceoverGuy Site
             </a>
           </div>
           <button
@@ -112,7 +112,7 @@ export default function Navigation() {
                 rel="noopener noreferrer"
                 data-testid="mobile-nav-main-site"
               >
-                Main Site
+                Main VoiceoverGuy Site
               </a>
             </div>
           </div>
