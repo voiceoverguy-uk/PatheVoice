@@ -8,7 +8,7 @@ export default function AboutSection() {
               WHAT IS THE <span className="text-accent">PATHÉ NEWS</span> VOICE?
             </h2>
             <p className="font-body text-lg mb-6 text-muted-foreground leading-relaxed" data-testid="text-vintage-description">
-              Think vintage cinema news: precise diction, lively pacing, and a cheerfully authoritative tone that carried headlines to UK audiences from the 1910s through the 1960s.
+              Think vintage cinema news: precise diction, lively pacing, and a cheerfully authoritative British male voiceover tone that carried headlines to UK audiences from the 1910s through the 1960s.
             </p>
             <p className="font-body text-lg text-muted-foreground leading-relaxed" data-testid="text-modern-usage">
               Modern projects use this <strong>newsreel-style narration</strong> to grab attention and make messages memorable with that unmistakable cadence often associated with the golden age of British broadcasting.

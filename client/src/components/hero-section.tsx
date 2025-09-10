@@ -26,7 +26,7 @@ export default function HeroSection() {
           </div>
           
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-description">
-            The Pathé newsreel style is instantly recognisable and brilliant for ads, documentaries, corporate events, games and social content. Authentic period flair meets broadcast-ready quality.
+            Professional British male voiceover artist specialising in the instantly recognisable Pathé newsreel style. Perfect for ads, documentaries, corporate events, games and social content. Authentic period flair meets broadcast-ready quality.
           </p>
           
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
