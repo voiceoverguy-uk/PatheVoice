@@ -16,11 +16,11 @@ export default function HeroSection() {
             <span className="block text-primary" data-testid="text-voice-title">NEWS VOICE</span>
           </h1>
           
-          <div className="news-headline p-6 mx-auto max-w-4xl mb-8">
+          <div className="news-headline p-6 mx-auto max-w-5xl mb-8">
             <p className="font-serif text-lg md:text-xl text-muted-foreground mb-2" data-testid="text-breaking-news">
               BREAKING NEWS:
             </p>
-            <p className="typewriter-text font-serif text-xl md:text-2xl text-primary font-semibold" data-testid="text-headline">
+            <p className="typewriter-text font-serif text-lg md:text-xl lg:text-2xl text-primary font-semibold" data-testid="text-headline">
               "That clipped, upbeat, very British delivery is now available for modern projects!"
             </p>
           </div>
