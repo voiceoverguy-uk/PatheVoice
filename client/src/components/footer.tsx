@@ -5,7 +5,7 @@ export default function Footer() {
   
   const socialLinks = [
     { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/voiceoverguy" },
-    { name: "YouTube", icon: Youtube, url: "https://youtube.com/voiceoverguyuk" },
+    { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/@voiceoverguyharris" },
   ];
   
   return (
