@@ -28,35 +28,35 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => handleNavClick('#about')}
-              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
+              className="text-foreground font-black hover:text-accent transition-colors duration-300"
               data-testid="nav-about"
             >
               About
             </button>
             <button
               onClick={() => handleNavClick('#examples')}
-              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
+              className="text-foreground font-black hover:text-accent transition-colors duration-300"
               data-testid="nav-examples"
             >
               Examples
             </button>
             <button
               onClick={() => handleNavClick('#services')}
-              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
+              className="text-foreground font-black hover:text-accent transition-colors duration-300"
               data-testid="nav-services"
             >
               Services
             </button>
             <button
               onClick={() => handleNavClick('#contact')}
-              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
+              className="text-foreground font-black hover:text-accent transition-colors duration-300"
               data-testid="nav-contact"
             >
               Contact
             </button>
             <a
               href="https://voiceoverguy.co.uk"
-              className="text-accent font-bold hover:text-accent/80 transition-colors duration-300"
+              className="border-2 border-accent text-accent font-black px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="nav-main-site"
