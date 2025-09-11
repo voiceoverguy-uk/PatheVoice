@@ -41,8 +41,8 @@ export default function Home() {
     <div className="bg-background text-foreground font-body leading-relaxed">
       <Navigation />
       <HeroSection />
-      <AboutSection />
       <ExamplesSection />
+      <AboutSection />
       <WhyBookSection />
       <ServicesSection />
       <StudioPromotion />
