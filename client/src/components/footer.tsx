@@ -1,5 +1,12 @@
+import { Youtube, Linkedin } from "lucide-react";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  
+  const socialLinks = [
+    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/voiceoverguy" },
+    { name: "YouTube", icon: Youtube, url: "https://youtube.com/voiceoverguyuk" },
+  ];
   
   return (
     <footer className="py-12 bg-secondary border-t border-border">
@@ -54,6 +61,21 @@ export default function Footer() {
             <h4 className="font-newsreel text-lg mb-4 tracking-wide" data-testid="footer-connect-title">
               CONNECT
             </h4>
+            <div className="flex justify-center md:justify-start gap-4 mb-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 text-muted-foreground hover:text-accent transition-colors"
+                  data-testid={`footer-social-${social.name.toLowerCase()}`}
+                  aria-label={`Follow on ${social.name}`}
+                >
+                  <social.icon size={24} />
+                </a>
+              ))}
+            </div>
             <p className="font-serif text-muted-foreground mb-2" data-testid="footer-services">
               British male voiceover services
             </p>
