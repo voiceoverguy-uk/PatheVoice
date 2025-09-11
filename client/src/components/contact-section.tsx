@@ -21,12 +21,6 @@ export default function ContactSection() {
           >
             CONTACT GUY HARRIS - PATHÉ NEWS VOICE
           </a>
-          
-          <div className="mt-8 text-center">
-            <p className="font-body text-base text-primary-foreground/60" data-testid="text-direct-email">
-              Or email directly: <a href="mailto:pathe@voiceoverguy.co.uk" className="text-accent hover:text-accent/80 underline" data-testid="link-direct-email">pathe@voiceoverguy.co.uk</a>
-            </p>
-          </div>
         </div>
       </div>
     </section>
