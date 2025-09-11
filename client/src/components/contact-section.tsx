@@ -29,25 +29,23 @@ export default function ContactSection() {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'd3aa5c11-1104-4d92-99a5-10062f5124fc',
           name: formData.name,
           email: formData.email,
           project: formData.project,
           message: formData.message,
-          subject: `New Pathé Voice Inquiry from ${formData.name}`,
         }),
       });
 
       if (response.ok) {
         toast({
-          title: "Message Sent!",
-          description: "Thank you for your inquiry! Guy will get back to you within 24 hours with a quote and turnaround time.",
+          title: "Message Received!",
+          description: "Guy will get back to you within 24 hours via email.",
         });
         
         // Reset form
