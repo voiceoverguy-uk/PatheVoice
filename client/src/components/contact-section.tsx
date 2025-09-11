@@ -1,5 +1,7 @@
 export default function ContactSection() {
-  const mailtoLink = "mailto:pathe@voiceoverguy.co.uk?subject=Pathé Voice Inquiry&body=Hi Guy,";
+  const subject = encodeURIComponent("Pathé Voice Inquiry");
+  const body = encodeURIComponent("Hi Guy,");
+  const mailtoLink = `mailto:pathe@voiceoverguy.co.uk?subject=${subject}&body=${body}`;
 
   return (
     <section id="contact" className="py-16 bg-primary text-primary-foreground scroll-reveal">
