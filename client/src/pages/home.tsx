@@ -5,6 +5,7 @@ import AboutSection from "@/components/about-section";
 import WhyBookSection from "@/components/why-book-section";
 import ExamplesSection from "@/components/examples-section";
 import ServicesSection from "@/components/services-section";
+import OtherVoicesSection from "@/components/other-voices-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
@@ -43,6 +44,7 @@ export default function Home() {
       <WhyBookSection />
       <ExamplesSection />
       <ServicesSection />
+      <OtherVoicesSection />
       <FAQSection />
       <ContactSection />
       <Footer />
