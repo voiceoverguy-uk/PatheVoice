@@ -28,35 +28,35 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => handleNavClick('#about')}
-              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
               data-testid="nav-about"
             >
               About
             </button>
             <button
               onClick={() => handleNavClick('#examples')}
-              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
               data-testid="nav-examples"
             >
               Examples
             </button>
             <button
               onClick={() => handleNavClick('#services')}
-              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
               data-testid="nav-services"
             >
               Services
             </button>
             <button
               onClick={() => handleNavClick('#contact')}
-              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+              className="text-muted-foreground font-bold hover:text-accent transition-colors duration-300"
               data-testid="nav-contact"
             >
               Contact
             </button>
             <a
               href="https://voiceoverguy.co.uk"
-              className="text-accent hover:text-accent/80 transition-colors duration-300"
+              className="text-accent font-bold hover:text-accent/80 transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="nav-main-site"
@@ -75,7 +75,7 @@ export default function Navigation() {
           </button>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 bg-background backdrop-blur-md rounded-lg shadow-lg -mx-4 px-4" data-testid="mobile-menu">
+          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 bg-background/90 backdrop-blur-md rounded-lg shadow-lg -mx-4 px-4" data-testid="mobile-menu">
             <div className="flex flex-col space-y-3">
               <button
                 onClick={() => handleNavClick('#about')}
