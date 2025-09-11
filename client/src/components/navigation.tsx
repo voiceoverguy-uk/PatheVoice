@@ -17,14 +17,23 @@ export default function Navigation() {
     }
   };
 
+  const scrollToTop = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="font-newsreel text-2xl tracking-wider">
+          <button 
+            onClick={scrollToTop}
+            className="font-newsreel text-2xl tracking-wider hover:opacity-80 transition-opacity duration-300"
+            data-testid="logo-home"
+          >
             <span className="text-primary">PATHÉ</span>{" "}
             <span className="text-accent">VOICE</span>
-          </div>
+          </button>
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => handleNavClick('#about')}
@@ -38,7 +47,7 @@ export default function Navigation() {
               className="text-foreground font-black hover:text-accent transition-colors duration-300"
               data-testid="nav-examples"
             >
-              Examples
+              Showreels
             </button>
             <button
               onClick={() => handleNavClick('#services')}
@@ -89,7 +98,7 @@ export default function Navigation() {
                 className="text-foreground font-bold hover:text-primary transition-colors duration-300 text-left"
                 data-testid="mobile-nav-examples"
               >
-                Examples
+                Showreels
               </button>
               <button
                 onClick={() => handleNavClick('#services')}
