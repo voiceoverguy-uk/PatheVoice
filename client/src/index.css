@@ -97,6 +97,7 @@
   .news-headline {
     background: linear-gradient(45deg, hsl(0, 0%, 95%), hsl(0, 0%, 98%));
     border-left: 4px solid var(--accent);
+    border-right: 4px solid var(--accent);
   }
   
   .typewriter-text {
