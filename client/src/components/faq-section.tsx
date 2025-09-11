@@ -22,8 +22,8 @@ export default function FAQSection() {
       answer: "WAV/AIFF/MP3 at your spec. Clean, mastered, ready to drop in. Professional audio engineering ensures compatibility with any production workflow."
     },
     {
-      question: "Do you do other voices?",
-      answer: "Oh yes! For other character voices beyond the Pathé Voice, visit my main site homepage at VoiceoverGuy.co.uk"
+      question: "Do you have an AI voice?",
+      answer: "I sure do, but i think you'll find Human First is better. Have a listen at ai-guy-human-vs-ai-voiceover"
     }
   ];
 
@@ -59,17 +59,17 @@ export default function FAQSection() {
               {openIndex === index && (
                 <div className="p-6 pt-0" data-testid={`faq-content-${index}`}>
                   <p className="font-body text-muted-foreground">
-                    {faq.answer.includes('VoiceoverGuy.co.uk') ? (
+                    {faq.answer.includes('ai-guy-human-vs-ai-voiceover') ? (
                       <>
-                        Oh yes! For other character voices beyond the Pathé Voice, visit my main site homepage at{' '}
+                        I sure do, but i think you'll find Human First is better.{' '}
                         <a 
-                          href="https://voiceoverguy.co.uk" 
+                          href="https://www.voiceoverguy.co.uk/ai-guy-human-vs-ai-voiceover" 
                           className="text-accent hover:text-accent/80 transition-colors" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          data-testid="link-main-site-faq"
+                          data-testid="link-ai-comparison"
                         >
-                          VoiceoverGuy.co.uk
+                          Have a listen
                         </a>
                       </>
                     ) : (
