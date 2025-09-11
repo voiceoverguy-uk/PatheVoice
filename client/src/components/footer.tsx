@@ -24,10 +24,10 @@ export default function Footer() {
             <h4 className="font-newsreel text-lg mb-4 tracking-wide" data-testid="footer-links-title">
               QUICK LINKS
             </h4>
-            <div className="space-y-2">
+            <div className="flex flex-col items-center md:items-start space-y-2">
               <a 
                 href="https://voiceoverguy.co.uk" 
-                className="block text-muted-foreground hover:text-accent transition-colors" 
+                className="text-muted-foreground hover:text-accent transition-colors" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 data-testid="footer-link-main-site"
@@ -36,7 +36,7 @@ export default function Footer() {
               </a>
               <a 
                 href="https://voiceoverguy.co.uk/pathe-news-voice" 
-                className="block text-muted-foreground hover:text-accent transition-colors" 
+                className="text-muted-foreground hover:text-accent transition-colors" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 data-testid="footer-link-portfolio"
@@ -50,7 +50,7 @@ export default function Footer() {
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
-                className="block text-muted-foreground hover:text-accent transition-colors text-left"
+                className="text-muted-foreground hover:text-accent transition-colors"
                 data-testid="footer-link-quote"
               >
                 Get Quote
