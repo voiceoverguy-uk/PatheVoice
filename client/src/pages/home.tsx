@@ -8,6 +8,7 @@ import ServicesSection from "@/components/services-section";
 import OtherVoicesSection from "@/components/other-voices-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
+import StudioPromotion from "@/components/studio-promotion";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
       <WhyBookSection />
       <ExamplesSection />
       <ServicesSection />
+      <StudioPromotion />
       <OtherVoicesSection />
       <FAQSection />
       <ContactSection />
