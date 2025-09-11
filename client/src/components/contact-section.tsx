@@ -35,7 +35,7 @@ export default function ContactSection() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'PLACEHOLDER_ACCESS_KEY', // Will be replaced with actual key
+          access_key: 'd3aa5c11-1104-4d92-99a5-10062f5124fc',
           name: formData.name,
           email: formData.email,
           project: formData.project,
