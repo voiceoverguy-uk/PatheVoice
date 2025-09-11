@@ -75,7 +75,7 @@ export default function Navigation() {
           </button>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4" data-testid="mobile-menu">
+          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 bg-background/98 backdrop-blur-md rounded-lg shadow-lg -mx-4 px-4" data-testid="mobile-menu">
             <div className="flex flex-col space-y-3">
               <button
                 onClick={() => handleNavClick('#about')}
