@@ -50,7 +50,7 @@ export default function Footer() {
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
-                className="text-muted-foreground hover:text-accent transition-colors"
+                className="text-muted-foreground hover:text-accent transition-colors bg-transparent border-none p-0 cursor-pointer"
                 data-testid="footer-link-quote"
               >
                 Get Quote
