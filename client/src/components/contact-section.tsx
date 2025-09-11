@@ -25,22 +25,48 @@ export default function ContactSection() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Show success message
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry! Guy will get back to you within 24 hours with a quote and turnaround time.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      project: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'PLACEHOLDER_ACCESS_KEY', // Will be replaced with actual key
+          name: formData.name,
+          email: formData.email,
+          project: formData.project,
+          message: formData.message,
+          subject: `New Pathé Voice Inquiry from ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your inquiry! Guy will get back to you within 24 hours with a quote and turnaround time.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          project: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error Sending Message",
+        description: "There was a problem sending your message. Please try again or email directly to pathe@voiceoverguy.co.uk",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
