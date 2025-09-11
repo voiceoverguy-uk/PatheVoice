@@ -1,4 +1,5 @@
-import { ExternalLink, Mic2 } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { RibbonMicDeco, ConsoleRadioDeco } from './icons';
 
 export default function StudioPromotion() {
   return (
@@ -6,13 +7,16 @@ export default function StudioPromotion() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-center gap-4 text-center">
           <div className="hidden md:block">
-            <Mic2 className="w-8 h-8 text-accent animate-pulse" />
+            <RibbonMicDeco className="w-8 h-8 text-accent animate-pulse" />
           </div>
           
           <div className="vintage-border bg-card/50 p-4 rounded">
-            <p className="font-serif text-sm md:text-base text-muted-foreground mb-2 tracking-wide">
-              📻 STUDIO BULLETIN
-            </p>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <ConsoleRadioDeco className="w-4 h-4 text-accent" />
+              <p className="font-serif text-sm md:text-base text-muted-foreground tracking-wide">
+                STUDIO BULLETIN
+              </p>
+            </div>
             <h3 className="font-newsreel text-lg md:text-xl tracking-wider mb-2" data-testid="heading-studio-promo">
               PROFESSIONAL RECORDING STUDIO AVAILABLE
             </h3>
@@ -32,7 +36,7 @@ export default function StudioPromotion() {
           </div>
           
           <div className="hidden md:block">
-            <Mic2 className="w-8 h-8 text-accent animate-pulse" />
+            <RibbonMicDeco className="w-8 h-8 text-accent animate-pulse" />
           </div>
         </div>
       </div>
