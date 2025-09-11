@@ -42,8 +42,8 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <WhyBookSection />
       <ExamplesSection />
+      <WhyBookSection />
       <ServicesSection />
       <StudioPromotion />
       <OtherVoicesSection />
