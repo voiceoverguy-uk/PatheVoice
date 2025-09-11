@@ -20,7 +20,7 @@ export default function StudioPromotion() {
               Need a space for voiceover or podcast recording? Our studio is available for hire!
             </p>
             <a 
-              href="https://www.voiceoverguy.co.uk/voiceover-studio" 
+              href="https://www.voiceoverguy.co.uk/yorkshire-podcast-studio" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-accent hover:text-primary transition-colors duration-300 font-serif text-sm tracking-wide"
