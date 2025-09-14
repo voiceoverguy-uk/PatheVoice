@@ -55,6 +55,13 @@ export default function Footer() {
               >
                 Get Quote
               </button>
+              <a 
+                href="/privacy-policy" 
+                className="text-muted-foreground hover:text-accent transition-colors" 
+                data-testid="footer-link-privacy"
+              >
+                Privacy Policy
+              </a>
             </div>
           </div>
           <div>
