@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
                 INFORMATION WE COLLECT
               </h2>
               <p className="font-body leading-relaxed mb-4">
-                When you contact Guy Harris - VoiceoverGuy for voiceover services, we collect information you provide including:
+                When you contact VoiceoverGuy for voiceover services, we collect information you provide including:
               </p>
               <ul className="font-body list-disc pl-6 space-y-2">
                 <li>Name and contact details (email address, phone number)</li>
