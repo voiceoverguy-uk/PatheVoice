@@ -11,7 +11,7 @@ export default function ContactSection() {
             BOOK THE PATHÉ STYLE <span className="text-accent">VOICE TODAY!</span>
           </h2>
           <p className="font-body text-lg text-primary-foreground/80 max-w-2xl mx-auto" data-testid="text-contact-description">
-            Click the button below to send an email with your script and project details. I'll respond with a quote and turnaround time within 24 hours.
+            Click the button below to send an email with your script and project details inc. usage. Recieve a quote and turnaround time within 24 hours.
           </p>
         </div>
         
