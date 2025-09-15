@@ -82,12 +82,12 @@ export default function PrivacyPolicy() {
                 CONTACT US
               </h2>
               <p className="font-body leading-relaxed">
-                For any questions about this privacy policy or to exercise your rights, please contact:
+                For any questions about this privacy policy or to exercise your rights, please visit:
               </p>
               <div className="vintage-border bg-secondary p-4 mt-4">
                 <p className="font-serif text-primary">
-                  <strong>Guy Harris - VoiceoverGuy</strong><br />
-                  Email: <a href="mailto:pathe@voiceoverguy.co.uk" className="text-accent hover:underline">pathe@voiceoverguy.co.uk</a>
+                  <strong>VoiceoverGuy</strong><br />
+                  Website: <a href="https://www.voiceoverguy.co.uk" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">www.voiceoverguy.co.uk</a>
                 </p>
               </div>
             </section>
