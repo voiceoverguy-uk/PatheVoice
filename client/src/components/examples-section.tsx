@@ -7,7 +7,7 @@ export default function ExamplesSection() {
             HEAR THE PATHÉ VOICE <span className="text-accent">IN ACTION</span>
           </h2>
           <p className="font-serif text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-examples-description">
-            Experience the authentic newsreel delivery that brings authority and nostalgia to modern projects.
+            Experience the authentic newsreel delivery bringing authority and nostalgia to modern projects.
           </p>
         </div>
 
