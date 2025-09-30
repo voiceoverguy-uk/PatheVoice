@@ -54,28 +54,6 @@ export default function ExamplesSection() {
           </div>
         </div>
 
-        {/* SoundCloud Player */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="vintage-border p-6 bg-card" data-testid="soundcloud-container">
-            <h3 className="font-newsreel text-2xl tracking-wide mb-4 text-center" data-testid="audio-demo-title">
-              AUDIO DEMO REEL
-            </h3>
-            <iframe 
-              width="100%" 
-              height="166" 
-              scrolling="no" 
-              frameBorder="no" 
-              allow="autoplay" 
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/140220757&color=%23D4AF37&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"
-              data-testid="soundcloud-player"
-            />
-            <div className="text-xs text-muted-foreground mt-2 text-center" data-testid="soundcloud-credits">
-              <a href="https://soundcloud.com/voiceoverguy" title="VoiceoverGuy" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" data-testid="link-soundcloud-profile">VoiceoverGuy</a> · 
-              <a href="https://soundcloud.com/voiceoverguy/pathe-newsreel-voice-demo-guy" title="Pathe Newsreel Voice Demo - Guy Harris" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" data-testid="link-soundcloud-track">Pathe Newsreel Voice Demo - Guy Harris</a>
-            </div>
-          </div>
-        </div>
-
         <div className="text-center">
           <p className="font-serif text-lg text-muted-foreground mb-4" data-testid="text-more-examples">
             See more examples on my Pathé News Voice page at
