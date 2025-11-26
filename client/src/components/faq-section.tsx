@@ -11,7 +11,7 @@ export default function FAQSection() {
   const faqs: FAQItem[] = [
     {
       question: "Can you record the Pathé voice today?",
-      answer: "Often, yes. Same-day or next-day delivery is common. Professional studio setup ensures broadcast-quality results on tight deadlines."
+      answer: "Oh yes. Same-day or next-day delivery is common. Professional studio setup ensures broadcast-quality results on tight deadlines."
     },
     {
       question: "Do you do straight or spoof?",
