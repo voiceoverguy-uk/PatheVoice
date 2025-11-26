@@ -35,13 +35,13 @@ export default function Footer() {
                 Main VoiceoverGuy Site
               </a>
               <a 
-                href="https://voiceoverguy.co.uk/pathe-news-voice" 
+                href="https://www.voiceoverguy.co.uk/pathe-news-voice" 
                 className="text-muted-foreground hover:text-accent transition-colors" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 data-testid="footer-link-portfolio"
               >
-                Full Pathé Portfolio
+                Pathé News Voiceover
               </a>
               <button 
                 onClick={() => {
