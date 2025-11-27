@@ -21,7 +21,7 @@ export default function HeroSection() {
               BREAKING NEWS:
             </p>
             <p className="typewriter-text font-serif text-lg md:text-xl lg:text-2xl text-primary font-semibold" data-testid="text-headline">
-              "That clipped, upbeat and very British delivery is now available for modern projects!"
+              "That clipped, upbeat, very British delivery is now available for modern projects!"
             </p>
           </div>
 
