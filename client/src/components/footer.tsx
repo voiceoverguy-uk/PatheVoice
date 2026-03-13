@@ -55,6 +55,29 @@ export default function Footer() {
               >
                 Get Quote
               </button>
+              <div className="pt-2 border-t border-border w-full">
+                <p className="text-xs text-muted-foreground/60 uppercase tracking-wider mb-2 font-newsreel">Also by Guy Harris</p>
+                <div className="flex flex-col space-y-2">
+                  <a 
+                    href="https://www.voiceofgod.co.uk" 
+                    className="text-muted-foreground hover:text-accent transition-colors" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    data-testid="footer-link-voiceofgod"
+                  >
+                    Voice of God
+                  </a>
+                  <a 
+                    href="https://www.santaguy.co.uk" 
+                    className="text-muted-foreground hover:text-accent transition-colors" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    data-testid="footer-link-santaguy"
+                  >
+                    Santa Guy
+                  </a>
+                </div>
+              </div>
               <a 
                 href="/privacy-policy" 
                 className="text-muted-foreground hover:text-accent transition-colors" 
