@@ -56,28 +56,28 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => handleNavClick('#about')}
-              className="text-foreground font-black hover:text-accent transition-colors duration-300"
+              className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
               data-testid="nav-about"
             >
               About
             </button>
             <button
               onClick={() => handleNavClick('#examples')}
-              className="text-foreground font-black hover:text-accent transition-colors duration-300"
+              className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
               data-testid="nav-examples"
             >
               Showreels
             </button>
             <button
               onClick={() => handleNavClick('#services')}
-              className="text-foreground font-black hover:text-accent transition-colors duration-300"
+              className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
               data-testid="nav-services"
             >
               Services
             </button>
             <button
               onClick={() => handleNavClick('#contact')}
-              className="text-foreground font-black hover:text-accent transition-colors duration-300"
+              className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
               data-testid="nav-contact"
             >
               Contact
