@@ -53,7 +53,7 @@ Preferred communication style: Simple, everyday language.
 - **Stock Images**: Professional photography for visual content
 
 ### Deployment
-- **Static Site Deployment**: Built for deployment on Vercel, Netlify, or any static hosting platform
-- **GitHub Integration**: Automated deployment pipeline via GitHub
+- **Hosting**: Vercel — auto-deploys from GitHub on every push
 - **Build Output**: Production-ready static files in `dist/` folder
 - **SPA Routing**: Configured with vercel.json for proper client-side routing support
+- **Social Banner**: `client/public/social-banner.jpg` is the OG/Twitter Card image served at `https://www.pathevoice.co.uk/social-banner.jpg`
