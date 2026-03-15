@@ -103,7 +103,7 @@ export default function ContactSection() {
                         <Input
                           placeholder="Your name"
                           {...field}
-                          className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent"
+                          className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300" />
@@ -121,7 +121,7 @@ export default function ContactSection() {
                           type="email"
                           placeholder="your@email.com"
                           {...field}
-                          className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent"
+                          className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300" />
@@ -142,7 +142,7 @@ export default function ContactSection() {
                           type="tel"
                           placeholder="Optional"
                           {...field}
-                          className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent"
+                          className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300" />
@@ -159,7 +159,7 @@ export default function ContactSection() {
                         <Input
                           placeholder="e.g. Awards, Corporate, Wedding"
                           {...field}
-                          className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent"
+                          className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300" />
@@ -179,7 +179,7 @@ export default function ContactSection() {
                         placeholder="Tell Guy about your project — script details, usage, deadline..."
                         rows={5}
                         {...field}
-                        className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent resize-none"
+                        className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent resize-none"
                       />
                     </FormControl>
                     <div className="mt-1">
