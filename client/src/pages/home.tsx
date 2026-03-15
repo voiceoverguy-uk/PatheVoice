@@ -9,6 +9,7 @@ import OtherVoicesSection from "@/components/other-voices-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
 import StudioPromotion from "@/components/studio-promotion";
+import ReviewsSection from "@/components/reviews-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
     <div className="bg-background text-foreground font-body leading-relaxed">
       <Navigation />
       <HeroSection />
+      <ReviewsSection />
       <ExamplesSection />
       <AboutSection />
       <WhyBookSection />
