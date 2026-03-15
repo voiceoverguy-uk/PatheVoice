@@ -69,9 +69,9 @@ function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
 <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:4px;overflow:hidden;">
 
 <!-- Header -->
-<tr><td style="background:#c0392b;padding:20px 24px;">
-  <span style="font-size:22px;font-weight:bold;color:#ffffff;letter-spacing:2px;">PATHÉ VOICE</span>
-  <span style="float:right;font-size:13px;color:#f8d7da;line-height:28px;">New Enquiry</span>
+<tr><td style="background:#FFB800;padding:20px 24px;">
+  <span style="font-size:22px;font-weight:bold;color:#141414;letter-spacing:2px;">PATHÉ VOICE</span>
+  <span style="float:right;font-size:13px;color:#141414;line-height:28px;opacity:0.7;">New Enquiry</span>
 </td></tr>
 
 <!-- Fields -->
@@ -80,19 +80,19 @@ function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
     ${fieldRow("Name", safeName)}
     ${fieldRow("Email", safeEmail)}
     ${fieldRow("Phone", safePhone)}
-    ${fieldRow("Event Type", safeEventType)}
+    ${fieldRow("Project", safeEventType)}
   </table>
 </td></tr>
 
 <!-- Message -->
 <tr><td style="padding:20px 24px;">
   <span style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:8px;">Message</span>
-  <div style="border-left:4px solid #c0392b;padding:14px 16px;background:#fafafa;border-radius:0 4px 4px 0;font-size:15px;color:#333;line-height:1.6;white-space:pre-wrap;">${safeMessage}</div>
+  <div style="border-left:4px solid #FFB800;padding:14px 16px;background:#fafafa;border-radius:0 4px 4px 0;font-size:15px;color:#333;line-height:1.6;white-space:pre-wrap;">${safeMessage}</div>
 </td></tr>
 
 <!-- Reply Button -->
 <tr><td align="center" style="padding:8px 24px 24px;">
-  <a href="${replyMailto}" style="display:inline-block;background:#c0392b;color:#ffffff;text-decoration:none;padding:12px 28px;border-radius:4px;font-size:14px;font-weight:bold;letter-spacing:1px;">REPLY TO ENQUIRY</a>
+  <a href="${replyMailto}" style="display:inline-block;background:#FFB800;color:#141414;text-decoration:none;padding:12px 28px;border-radius:4px;font-size:14px;font-weight:bold;letter-spacing:1px;">REPLY TO ENQUIRY</a>
 </td></tr>
 
 <!-- Footer -->
