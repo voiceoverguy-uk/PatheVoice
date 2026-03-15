@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0A0A0A"/>
+  <!-- Gold border -->
+  <rect x="18" y="18" width="476" height="476" fill="none" stroke="#FFB800" stroke-width="4"/>
+  <!-- Inner thin border -->
+  <rect x="28" y="28" width="456" height="456" fill="none" stroke="#FFB800" stroke-width="1" opacity="0.4"/>
+
+  <!-- PATHÉ -->
+  <text
+    x="256"
+    y="242"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900"
+    font-size="122"
+    fill="#FFB800"
+    text-anchor="middle"
+    letter-spacing="6"
+  >PATH&#201;</text>
+
+  <!-- Divider line -->
+  <line x1="80" y1="272" x2="432" y2="272" stroke="#FFB800" stroke-width="2" opacity="0.55"/>
+
+  <!-- VOICE -->
+  <text
+    x="256"
+    y="372"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900"
+    font-size="100"
+    fill="#FFB800"
+    text-anchor="middle"
+    letter-spacing="10"
+  >VOICE</text>
+</svg>
