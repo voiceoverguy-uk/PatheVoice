@@ -10,13 +10,14 @@ Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
-### Frontend-Only Static Site
+### Frontend + Vercel Serverless Functions
 - **React SPA**: Single-page application built with React 18 and TypeScript
 - **Routing**: Client-side routing using Wouter for lightweight navigation
 - **Styling**: Tailwind CSS with custom design system and vintage-themed components
 - **UI Components**: Comprehensive component library using Radix UI primitives with shadcn/ui styling
 - **State Management**: React hooks for local state management
 - **Build Tool**: Vite for fast development and optimized production builds
+- **Serverless API**: Vercel functions in `api/` directory for server-side logic (contact form emails via Resend, Google Reviews via Places API)
 
 ### Component Architecture
 - **Design System**: Custom CSS variables and Tailwind configuration for consistent theming
@@ -46,7 +47,12 @@ Preferred communication style: Simple, everyday language.
 
 ### Form & Validation
 - **React Hook Form**: Form state management with validation
-- **Zod**: Schema validation library for form validation
+- **Zod**: Schema validation library for form validation (shared schema in `client/src/lib/contactSchema.ts`, duplicated in `api/contact.ts` for server-side validation)
+
+### Contact Form & Email
+- **Resend**: Email delivery service for contact form submissions (server-side only via `api/contact.ts`)
+- **Email Template**: Table-based HTML with inline CSS for Gmail/Outlook compatibility
+- **Secrets**: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` (must also be set in Vercel environment variables)
 
 ### Media Integration
 - **YouTube Embeds**: Video examples showcasing voiceover work

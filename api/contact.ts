@@ -15,18 +15,28 @@ type VercelResponse = {
 };
 
 const contactSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Please enter a valid email address"),
-  phone: z.string().optional().default(""),
-  eventType: z.string().optional().default(""),
+  name: z.string().min(1, "Name is required").max(100, "Name is too long"),
+  email: z.string().email("Please enter a valid email address").max(254, "Email is too long"),
+  phone: z.string().max(30, "Phone number is too long").optional().default(""),
+  eventType: z.string().max(100, "Event type is too long").optional().default(""),
   message: z
     .string()
     .min(1, "Message is required")
+    .max(5000, "Message is too long")
     .refine(
       (val) => val.trim().split(/\s+/).filter(Boolean).length >= 10,
       "Message must be at least 10 words"
     ),
 });
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
 function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
   const timestamp = new Date().toLocaleString("en-GB", {
@@ -35,7 +45,13 @@ function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
     timeStyle: "short",
   });
 
-  const replyMailto = `mailto:${data.email}?subject=Re: Your Pathé Voice Enquiry&body=Hi ${encodeURIComponent(data.name)},%0D%0A%0D%0AThank you for your enquiry.%0D%0A%0D%0A`;
+  const safeName = escapeHtml(data.name);
+  const safeEmail = escapeHtml(data.email);
+  const safePhone = escapeHtml(data.phone || "");
+  const safeEventType = escapeHtml(data.eventType || "");
+  const safeMessage = escapeHtml(data.message);
+
+  const replyMailto = `mailto:${encodeURIComponent(data.email)}?subject=Re: Your Pathé Voice Enquiry&body=Hi ${encodeURIComponent(data.name)},%0D%0A%0D%0AThank you for your enquiry.%0D%0A%0D%0A`;
 
   const fieldRow = (label: string, value: string) =>
     value
@@ -61,17 +77,17 @@ function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
 <!-- Fields -->
 <tr><td style="padding:24px 24px 0;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#fafafa;border:1px solid #eee;border-radius:4px;">
-    ${fieldRow("Name", data.name)}
-    ${fieldRow("Email", data.email)}
-    ${fieldRow("Phone", data.phone || "")}
-    ${fieldRow("Event Type", data.eventType || "")}
+    ${fieldRow("Name", safeName)}
+    ${fieldRow("Email", safeEmail)}
+    ${fieldRow("Phone", safePhone)}
+    ${fieldRow("Event Type", safeEventType)}
   </table>
 </td></tr>
 
 <!-- Message -->
 <tr><td style="padding:20px 24px;">
   <span style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:8px;">Message</span>
-  <div style="border-left:4px solid #c0392b;padding:14px 16px;background:#fafafa;border-radius:0 4px 4px 0;font-size:15px;color:#333;line-height:1.6;white-space:pre-wrap;">${data.message}</div>
+  <div style="border-left:4px solid #c0392b;padding:14px 16px;background:#fafafa;border-radius:0 4px 4px 0;font-size:15px;color:#333;line-height:1.6;white-space:pre-wrap;">${safeMessage}</div>
 </td></tr>
 
 <!-- Reply Button -->
@@ -91,7 +107,14 @@ function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  const allowedOrigins = [
+    "https://www.pathevoice.co.uk",
+    "https://pathevoice.co.uk",
+  ];
+  const origin = req.headers["origin"] as string | undefined;
+  if (origin && allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
