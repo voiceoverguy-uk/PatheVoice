@@ -12,6 +12,7 @@ export default function ContactSection() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -30,6 +31,7 @@ export default function ContactSection() {
 
   async function onSubmit(data: ContactFormData) {
     setIsSubmitting(true);
+    setSubmitError(null);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -50,6 +52,7 @@ export default function ContactSection() {
       });
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setSubmitError(message);
       toast({
         title: "Failed to send",
         description: message,
@@ -194,6 +197,12 @@ export default function ContactSection() {
                   </FormItem>
                 )}
               />
+
+              {submitError && (
+                <div className="bg-red-900/30 border border-red-400/40 text-red-300 px-4 py-3 text-sm font-serif text-center rounded">
+                  {submitError}
+                </div>
+              )}
 
               <button
                 type="submit"
