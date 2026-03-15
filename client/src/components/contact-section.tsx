@@ -154,10 +154,10 @@ export default function ContactSection() {
                   name="eventType"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary-foreground/70 font-serif text-sm">Event Type</FormLabel>
+                      <FormLabel className="text-primary-foreground/70 font-serif text-sm">Project</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="e.g. Awards, Corporate, Wedding"
+                          placeholder="e.g. radio ad, TVC, online"
                           {...field}
                           className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
                         />
