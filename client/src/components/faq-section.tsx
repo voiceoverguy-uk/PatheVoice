@@ -11,15 +11,15 @@ export default function FAQSection() {
   const faqs: FAQItem[] = [
     {
       question: "Can you record the Pathé voice today?",
-      answer: "Oh yes. Same-day or next-day delivery is common. Professional studio setup ensures broadcast-quality results on tight deadlines."
+      answer: "Yesssss! Same-day or next-day delivery is common. Professional studio setup ensures broadcast-quality results for your tight deadlines."
     },
     {
       question: "Do you do straight or spoof?",
-      answer: "Both. We can go authentic newsreel or dial in a playful parody—your call. The versatility makes it perfect for serious historical content or comedic applications."
+      answer: "Both. I can go authentic newsreel or dial in a playful parody, your choice. The versatility makes it perfect for serious historical content or comedic applications."
     },
     {
       question: "What formats do you supply?",
-      answer: "WAV/AIFF/MP3 at your spec. Clean, mastered, ready to drop in. Professional audio engineering ensures compatibility with any production workflow."
+      answer: "WAV/AIFF/MP3 at your spec. Edited, de-breathed, ready to drop in. Professional audio engineering ensures compatibility with any production workflow."
     },
     {
       question: "Do you have an AI voice?",
