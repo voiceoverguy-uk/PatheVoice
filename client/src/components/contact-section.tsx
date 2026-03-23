@@ -8,6 +8,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send, Loader2 } from "lucide-react";
 
+function getTimeGreeting(): string {
+  const now = new Date();
+  const day = now.getDay();
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  const totalMins = hour * 60 + minute;
+
+  if (day === 5 && totalMins >= 18 * 60) return "Have a good evening and weekend";
+  if (totalMins < 12 * 60) return "Have a good morning";
+  if (totalMins < 18 * 60) return "Have a good afternoon";
+  return "Have a good evening";
+}
+
 export default function ContactSection() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -82,11 +95,14 @@ export default function ContactSection() {
             <p className="font-serif text-primary-foreground/80">
               Guy will get back to you within 24 hours.
             </p>
+            <p className="font-serif text-primary-foreground/60 mt-1 text-sm">
+              {getTimeGreeting()}.
+            </p>
             <button
-              onClick={() => setSubmitted(false)}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="mt-6 text-accent hover:text-accent/80 font-serif underline underline-offset-4 transition-colors"
             >
-              Send another message
+              Return to homepage
             </button>
           </div>
         ) : (
