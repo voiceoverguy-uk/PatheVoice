@@ -32,8 +32,6 @@ export default function ContactSection() {
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
-      eventType: "",
       message: "",
     },
   });
@@ -136,44 +134,6 @@ export default function ContactSection() {
                         <Input
                           type="email"
                           placeholder="your@email.com"
-                          {...field}
-                          className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
-                        />
-                      </FormControl>
-                      <FormMessage className="text-red-300" />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-primary-foreground/70 font-serif text-sm">Phone</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          placeholder="Optional"
-                          {...field}
-                          className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
-                        />
-                      </FormControl>
-                      <FormMessage className="text-red-300" />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="eventType"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-primary-foreground/70 font-serif text-sm">Project</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="e.g. radio ad, TVC, online"
                           {...field}
                           className="bg-white border-primary-foreground/20 text-gray-900 placeholder:text-gray-400 focus:border-accent"
                         />

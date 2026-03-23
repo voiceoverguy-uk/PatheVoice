@@ -17,8 +17,6 @@ type VercelResponse = {
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required").max(100, "Name is too long"),
   email: z.string().email("Please enter a valid email address").max(254, "Email is too long"),
-  phone: z.string().max(30, "Phone number is too long").optional().default(""),
-  eventType: z.string().max(100, "Event type is too long").optional().default(""),
   message: z
     .string()
     .min(1, "Message is required")
@@ -47,8 +45,6 @@ function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
 
   const safeName = escapeHtml(data.name);
   const safeEmail = escapeHtml(data.email);
-  const safePhone = escapeHtml(data.phone || "");
-  const safeEventType = escapeHtml(data.eventType || "");
   const safeMessage = escapeHtml(data.message);
 
   const replyMailto = `mailto:${encodeURIComponent(data.email)}?subject=Re: Your Pathé Voice Enquiry&body=Hi ${encodeURIComponent(data.name)},%0D%0A%0D%0AThank you for your enquiry.%0D%0A%0D%0A`;
@@ -79,8 +75,6 @@ function buildEmailHtml(data: z.infer<typeof contactSchema>, ip: string) {
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#fafafa;border:1px solid #eee;border-radius:4px;">
     ${fieldRow("Name", safeName)}
     ${fieldRow("Email", safeEmail)}
-    ${fieldRow("Phone", safePhone)}
-    ${fieldRow("Project", safeEventType)}
   </table>
 </td></tr>
 
@@ -141,9 +135,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: "Email service not configured" });
   }
 
-  const subject = data.eventType
-    ? `[Pathé Voice] Enquiry: ${data.eventType}`
-    : "[Pathé Voice] New Enquiry";
+  const subject = "[Pathé Voice] New Enquiry";
 
   const ip =
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
