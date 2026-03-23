@@ -44,16 +44,16 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center">
           <button 
             onClick={handleLogoClick}
-            className="font-newsreel text-2xl tracking-wider hover:opacity-80 transition-opacity duration-300"
+            className="font-newsreel text-2xl tracking-wider hover:opacity-80 transition-opacity duration-300 shrink-0"
             data-testid="logo-home"
           >
             <span className="text-primary">PATHÉ</span>{" "}
             <span className="text-accent">VOICE</span>
           </button>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-10">
             <button
               onClick={() => handleNavClick('#about')}
               className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
@@ -82,6 +82,8 @@ export default function Navigation() {
             >
               Contact
             </button>
+          </div>
+          <div className="hidden md:flex ml-auto">
             <a
               href="https://voiceoverguy.co.uk"
               className="border-2 border-accent text-accent font-black px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-all duration-300"
@@ -93,7 +95,7 @@ export default function Navigation() {
             </a>
           </div>
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 ml-auto"
             onClick={toggleMobileMenu}
             data-testid="button-mobile-menu"
           >
