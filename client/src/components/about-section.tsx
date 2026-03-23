@@ -1,3 +1,5 @@
+import AudioPlayer from "@/components/audio-player";
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-16 scroll-reveal">
@@ -22,6 +24,15 @@ export default function AboutSection() {
               data-testid="img-vintage-studio"
             />
           </div>
+        </div>
+
+        <div className="mt-12 max-w-3xl mx-auto">
+          <AudioPlayer
+            src="/pathe-voice-demo.mp3"
+            logoSrc="/pathe-logo.png"
+            title="Pathé Newsreel Voice Demo"
+            subtitle="Voice Demo — Guy Harris"
+          />
         </div>
       </div>
     </section>
