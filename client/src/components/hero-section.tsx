@@ -1,3 +1,5 @@
+import AudioPlayer from "@/components/audio-player";
+
 export default function HeroSection() {
   const handleScrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
@@ -25,23 +27,14 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* SoundCloud Player */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="vintage-border p-6 bg-card" data-testid="soundcloud-container">
-              <iframe 
-                width="100%" 
-                height="166" 
-                scrolling="no" 
-                frameBorder="no" 
-                allow="autoplay" 
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/140220757&color=%23D4AF37&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"
-                data-testid="soundcloud-player"
-              />
-              <div className="text-xs text-muted-foreground mt-2 text-center" data-testid="soundcloud-credits">
-                <a href="https://soundcloud.com/voiceoverguy" title="VoiceoverGuy" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" data-testid="link-soundcloud-profile">VoiceoverGuy</a> · 
-                <a href="https://soundcloud.com/voiceoverguy/pathe-newsreel-voice-demo-guy" title="Pathe Newsreel Voice Demo - Guy Harris" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" data-testid="link-soundcloud-track">Pathe Newsreel Voice Demo - Guy Harris</a>
-              </div>
-            </div>
+          {/* Audio Player */}
+          <div className="max-w-3xl mx-auto mb-8">
+            <AudioPlayer
+              src="/pathe-voice-demo.mp3"
+              logoSrc="/pathe-logo.png"
+              title="Pathé Newsreel Voice Demo"
+              subtitle="Voice Demo — Guy Harris"
+            />
           </div>
           
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-description">
