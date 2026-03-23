@@ -13,6 +13,7 @@ export default function Footer() {
     { label: "Pathé News Voiceover", url: "https://www.voiceoverguy.co.uk/pathe-news-voice", external: true },
     { label: "Voice of God", url: "https://www.voiceofgod.co.uk", external: true },
     { label: "Santa Guy", url: "https://www.santaguy.co.uk", external: true },
+    { label: "Halloween Voice", url: "https://www.halloweenvoice.co.uk", external: true },
     { label: "Privacy Policy", url: "/privacy-policy", external: false },
   ];
 
