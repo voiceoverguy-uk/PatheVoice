@@ -20,7 +20,6 @@ export default function Footer() {
   return (
     <footer className="bg-secondary border-t border-border">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="film-strip my-0"></div>
         <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-newsreel text-xl tracking-wider shrink-0">
             <span className="text-primary">PATHÉ</span>{" "}
