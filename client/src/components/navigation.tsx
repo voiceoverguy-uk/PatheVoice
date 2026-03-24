@@ -55,18 +55,18 @@ export default function Navigation() {
           </button>
           <div className="hidden md:flex space-x-8">
             <button
-              onClick={() => handleNavClick('#about')}
-              className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
-              data-testid="nav-about"
-            >
-              About
-            </button>
-            <button
               onClick={() => handleNavClick('#examples')}
               className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
               data-testid="nav-examples"
             >
               Showreels
+            </button>
+            <button
+              onClick={() => handleNavClick('#about')}
+              className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
+              data-testid="nav-about"
+            >
+              About
             </button>
             <button
               onClick={() => handleNavClick('#services')}
@@ -113,18 +113,18 @@ export default function Navigation() {
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 bg-background/90 backdrop-blur-md rounded-lg shadow-lg -mx-4 px-4" data-testid="mobile-menu">
             <div className="flex flex-col space-y-3">
               <button
-                onClick={() => handleNavClick('#about')}
-                className="text-foreground font-bold hover:text-primary transition-colors duration-300 text-left"
-                data-testid="mobile-nav-about"
-              >
-                About
-              </button>
-              <button
                 onClick={() => handleNavClick('#examples')}
                 className="text-foreground font-bold hover:text-primary transition-colors duration-300 text-left"
                 data-testid="mobile-nav-examples"
               >
                 Showreels
+              </button>
+              <button
+                onClick={() => handleNavClick('#about')}
+                className="text-foreground font-bold hover:text-primary transition-colors duration-300 text-left"
+                data-testid="mobile-nav-about"
+              >
+                About
               </button>
               <button
                 onClick={() => handleNavClick('#services')}
