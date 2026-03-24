@@ -11,7 +11,7 @@ export default function OtherVoicesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-primary/5 p-8 border-2 border-accent/20 text-center hover:border-accent/40 transition-colors">
             <h3 className="font-serif text-2xl mb-4 text-foreground" data-testid="heading-santa-voice">
               UK's Voice of Santa
@@ -45,6 +45,24 @@ export default function OtherVoicesSection() {
               data-testid="link-attenborough-voice"
             >
               HEAR ATTENBOROUGH VOICE
+            </a>
+          </div>
+
+          <div className="bg-primary/5 p-8 border-2 border-accent/20 text-center hover:border-accent/40 transition-colors">
+            <h3 className="font-serif text-2xl mb-4 text-foreground" data-testid="heading-football-voice">
+              Football Commentator Voice
+            </h3>
+            <p className="font-body text-muted-foreground mb-6">
+              Highly sought after voice of football commentary. As used in films, tv ads and radio commercials.
+            </p>
+            <a
+              href="https://www.voiceoverguy.co.uk/football-commentator-voice"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-accent text-accent-foreground px-6 py-3 font-newsreel tracking-wide hover:bg-accent/90 transition-colors"
+              data-testid="link-football-voice"
+            >
+              HEAR FOOTBALL VOICE
             </a>
           </div>
         </div>
