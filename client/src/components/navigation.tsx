@@ -82,6 +82,13 @@ export default function Navigation() {
             >
               Contact
             </button>
+            <button
+              onClick={() => handleNavClick('#other-voices')}
+              className="relative text-foreground font-black hover:text-accent transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-left"
+              data-testid="nav-other-voices"
+            >
+              Other Voices
+            </button>
             <a
               href="https://voiceoverguy.co.uk"
               className="border-2 border-accent text-accent font-black px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-all duration-300"
@@ -132,6 +139,13 @@ export default function Navigation() {
                 data-testid="mobile-nav-contact"
               >
                 Contact
+              </button>
+              <button
+                onClick={() => handleNavClick('#other-voices')}
+                className="text-foreground font-bold hover:text-primary transition-colors duration-300 text-left"
+                data-testid="mobile-nav-other-voices"
+              >
+                Other Voices
               </button>
               <a
                 href="https://voiceoverguy.co.uk"
