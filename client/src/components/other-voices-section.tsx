@@ -14,7 +14,7 @@ export default function OtherVoicesSection() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-primary/5 p-8 border-2 border-accent/20 text-center hover:border-accent/40 transition-colors">
             <h3 className="font-serif text-2xl mb-4 text-foreground" data-testid="heading-santa-voice">
-              UK's Voice of Santa
+              The UK's Voice of Santa
             </h3>
             <p className="font-body text-muted-foreground mb-6">
               Bringing magic to Christmas with an authentic, warm Santa voice that delights children and adults alike.
