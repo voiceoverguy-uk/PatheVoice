@@ -1,5 +1,5 @@
 const PLACE_ID = 'ChIJL1W4QyVneUgRBV8j4XrOzaM';
-const FALLBACK = { rating: 5.0, reviewCount: 119 };
+const FALLBACK = { rating: 5.0, reviewCount: 120 };
 const CACHE_DURATION = 24 * 60 * 60 * 1000;
 
 let cache = { data: null, timestamp: 0 };

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Star } from "lucide-react";
 
-const FALLBACK = { rating: 5.0, reviewCount: 119 };
+const FALLBACK = { rating: 5.0, reviewCount: 120 };
 const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/?q=place_id:ChIJL1W4QyVneUgRBV8j4XrOzaM";
 
 export default function ReviewsSection() {
