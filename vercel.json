@@ -1,7 +1,7 @@
 {
   "redirects": [
-    { "source": "/guy-harris", "destination": "/", "permanent": true },
-    { "source": "/guy-harris/", "destination": "/", "permanent": true }
+    { "source": "/guy-harris", "destination": "https://www.pathevoice.co.uk/", "permanent": true },
+    { "source": "/guy-harris/", "destination": "https://www.pathevoice.co.uk/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
