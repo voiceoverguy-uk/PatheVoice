@@ -14,6 +14,7 @@ export default function Footer() {
     { label: "Voice of God", url: "https://www.voiceofgod.co.uk", external: true },
     { label: "Santa Guy", url: "https://www.santaguy.co.uk", external: true },
     { label: "Halloween Voice", url: "https://www.halloweenvoice.co.uk", external: true },
+    { label: "Movie Trailer Voice", url: "https://www.movietrailervoice.co.uk", external: true },
     { label: "Privacy Policy", url: "/privacy-policy", external: false },
   ];
 
