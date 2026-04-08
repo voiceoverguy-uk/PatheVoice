@@ -1,108 +1,92 @@
 import { chromium } from 'playwright';
-import { createServer } from 'http';
-import { readFile, mkdir, writeFile } from 'fs/promises';
+import { spawn } from 'child_process';
+import { mkdir, writeFile } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DIST = path.join(__dirname, 'dist');
 const PORT = 4173;
-
 const ROUTES = ['/', '/privacy-policy'];
 
-function getMimeType(ext) {
-  const map = {
-    '.html': 'text/html; charset=utf-8',
-    '.js': 'application/javascript',
-    '.css': 'text/css',
-    '.json': 'application/json',
-    '.png': 'image/png',
-    '.jpg': 'image/jpeg',
-    '.jpeg': 'image/jpeg',
-    '.svg': 'image/svg+xml',
-    '.ico': 'image/x-icon',
-    '.woff2': 'font/woff2',
-    '.woff': 'font/woff',
-    '.ttf': 'font/ttf',
-    '.mp3': 'audio/mpeg',
-    '.txt': 'text/plain',
-    '.webp': 'image/webp',
-  };
-  return map[ext] || 'application/octet-stream';
+function waitForServer(port, timeout = 20000) {
+  return new Promise((resolve, reject) => {
+    const start = Date.now();
+    const check = () => {
+      fetch(`http://127.0.0.1:${port}/`)
+        .then(() => resolve())
+        .catch(() => {
+          if (Date.now() - start > timeout) {
+            reject(new Error(`Server did not start on port ${port} within ${timeout}ms`));
+          } else {
+            setTimeout(check, 300);
+          }
+        });
+    };
+    check();
+  });
 }
 
-const server = createServer(async (req, res) => {
-  const url = (req.url || '/').split('?')[0];
-
-  if (url.startsWith('/api/')) {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end('{}');
-    return;
-  }
-
-  const ext = path.extname(url);
-  let filePath = ext
-    ? path.join(DIST, url)
-    : path.join(DIST, 'index.html');
-
-  try {
-    const content = await readFile(filePath);
-    res.writeHead(200, { 'Content-Type': getMimeType(path.extname(filePath)) });
-    res.end(content);
-  } catch {
-    try {
-      const content = await readFile(path.join(DIST, 'index.html'));
-      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-      res.end(content);
-    } catch {
-      res.writeHead(404);
-      res.end('Not found');
-    }
-  }
-});
-
 async function prerender() {
-  await new Promise((resolve) => server.listen(PORT, '127.0.0.1', resolve));
-  console.log(`Static server ready on http://127.0.0.1:${PORT}`);
+  const viteProcess = spawn(
+    'npx',
+    ['vite', 'preview', '--port', String(PORT), '--host', '127.0.0.1'],
+    { stdio: ['ignore', 'pipe', 'pipe'] }
+  );
 
-  const browser = await chromium.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
-  });
+  viteProcess.stdout.on('data', (d) => process.stdout.write(d));
+  viteProcess.stderr.on('data', (d) => process.stderr.write(d));
 
   try {
-    for (const route of ROUTES) {
-      const page = await browser.newPage();
+    console.log('Starting vite preview server...');
+    await waitForServer(PORT);
+    console.log(`Vite preview ready on http://127.0.0.1:${PORT}`);
 
-      page.on('pageerror', () => {});
-      page.on('console', () => {});
+    const browser = await chromium.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+    });
 
-      await page.goto(`http://127.0.0.1:${PORT}${route}`, {
-        waitUntil: 'networkidle',
-        timeout: 30000,
-      });
+    try {
+      for (const route of ROUTES) {
+        const page = await browser.newPage();
 
-      await page.waitForTimeout(500);
+        page.on('pageerror', (err) =>
+          console.warn(`[prerender] Page error on ${route}:`, err.message)
+        );
+        page.on('console', (msg) => {
+          if (msg.type() === 'error') {
+            console.warn(`[prerender] Console error on ${route}:`, msg.text());
+          }
+        });
 
-      const html = await page.content();
+        await page.goto(`http://127.0.0.1:${PORT}${route}`, {
+          waitUntil: 'networkidle',
+          timeout: 30000,
+        });
 
-      let outPath;
-      if (route === '/') {
-        outPath = path.join(DIST, 'index.html');
-      } else {
-        const dir = path.join(DIST, route.replace(/^\//, ''));
-        await mkdir(dir, { recursive: true });
-        outPath = path.join(dir, 'index.html');
+        await page.waitForTimeout(500);
+
+        const html = await page.content();
+
+        let outPath;
+        if (route === '/') {
+          outPath = path.join(__dirname, 'dist', 'index.html');
+        } else {
+          const dir = path.join(__dirname, 'dist', route.replace(/^\//, ''));
+          await mkdir(dir, { recursive: true });
+          outPath = path.join(dir, 'index.html');
+        }
+
+        await writeFile(outPath, html, 'utf-8');
+        const label = route === '/' ? 'dist/index.html' : `dist${route}/index.html`;
+        console.log(`✓ Pre-rendered ${route} → ${label}`);
+
+        await page.close();
       }
-
-      await writeFile(outPath, html, 'utf-8');
-      const label = route === '/' ? 'dist/index.html' : `dist${route}/index.html`;
-      console.log(`✓ Pre-rendered ${route} → ${label}`);
-
-      await page.close();
+    } finally {
+      await browser.close();
     }
   } finally {
-    await browser.close();
-    await new Promise((resolve) => server.close(resolve));
+    viteProcess.kill();
   }
 
   console.log('Pre-rendering complete.');
