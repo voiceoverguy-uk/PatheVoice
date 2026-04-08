@@ -1,4 +1,5 @@
 {
+  "buildCommand": "npm run build && npx playwright install chromium --with-deps && node prerender.mjs",
   "redirects": [
     { "source": "/guy-harris", "destination": "https://www.pathevoice.co.uk/", "permanent": true },
     { "source": "/guy-harris/", "destination": "https://www.pathevoice.co.uk/", "permanent": true }
