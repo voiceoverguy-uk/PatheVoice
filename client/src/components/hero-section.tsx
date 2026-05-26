@@ -28,7 +28,7 @@ export default function HeroSection() {
           </div>
 
           {/* Media row: audio demo (left) + Aston Villa Short (right) */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 mb-8 max-w-5xl mx-auto">
 
             {/* Audio player — stacks second on mobile, left on desktop */}
             <div className="order-last md:order-first shrink-0 w-full max-w-[270px] mx-auto md:mx-0">
