@@ -12,16 +12,16 @@ export default function ExamplesSection() {
         </div>
 
         {/* YouTube Videos */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="vintage-border p-4 bg-card" data-testid="video-container-1">
-            <div className="aspect-w-16 aspect-h-9 mb-4">
+            <div className="mb-4">
               <iframe 
                 src="https://www.youtube.com/embed/WwezBdZv2F4" 
                 title="Pathé News Voiceover - Guy Harris Demo 1"
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
-                className="w-full h-64 md:h-72"
+                className="w-full h-48 md:h-52"
                 data-testid="youtube-video-1"
               />
             </div>
@@ -34,14 +34,14 @@ export default function ExamplesSection() {
           </div>
           
           <div className="vintage-border p-4 bg-card" data-testid="video-container-2">
-            <div className="aspect-w-16 aspect-h-9 mb-4">
+            <div className="mb-4">
               <iframe 
                 src="https://www.youtube.com/embed/ArEJtd9c6Uw" 
                 title="Pathé News Voiceover - Guy Harris Demo 2"
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
-                className="w-full h-64 md:h-72"
+                className="w-full h-48 md:h-52"
                 data-testid="youtube-video-2"
               />
             </div>
@@ -50,6 +50,26 @@ export default function ExamplesSection() {
             </h3>
             <p className="font-serif text-muted-foreground" data-testid="video-description-2">
               Sports newsreel style application
+            </p>
+          </div>
+
+          <div className="vintage-border p-4 bg-card" data-testid="video-container-3">
+            <div className="mb-4">
+              <iframe 
+                src="https://www.youtube.com/embed/Lp4lZUcdQ_w" 
+                title="Aston Villa — Official Pathé Voiceover by Guy Harris"
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+                className="w-full h-48 md:h-52"
+                data-testid="youtube-video-3"
+              />
+            </div>
+            <h3 className="font-newsreel text-xl tracking-wide mb-2" data-testid="video-title-3">
+              ASTON VILLA SHORT
+            </h3>
+            <p className="font-serif text-muted-foreground" data-testid="video-description-3">
+              Premier League football in the Pathé style
             </p>
           </div>
         </div>
