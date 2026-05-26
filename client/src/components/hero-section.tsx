@@ -63,7 +63,7 @@ export default function HeroSection() {
               </div>
               <div className="mt-3 text-center">
                 <p className="font-newsreel text-base tracking-widest text-accent">ASTON VILLA</p>
-                <p className="font-serif text-xs text-muted-foreground uppercase tracking-widest mt-0.5">Official Voiceover</p>
+                <p className="font-serif text-xs text-muted-foreground uppercase tracking-widest mt-0.5">Glory Days — Pathé Voice Style</p>
               </div>
             </div>
 
