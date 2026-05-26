@@ -27,14 +27,39 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Audio Player */}
-          <div className="max-w-3xl mx-auto mb-8">
-            <AudioPlayer
-              src="/pathe-voice-demo.mp3"
-              logoSrc="/pathe-logo.png"
-              title="Pathé Newsreel Voice Demo"
-              subtitle="Voice Demo — Guy Harris"
-            />
+          {/* Media row: audio demo (left) + Aston Villa Short (right) */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 max-w-5xl mx-auto">
+
+            {/* Audio player — stacks second on mobile, left on desktop */}
+            <div className="order-last md:order-first flex-1 w-full min-w-0">
+              <AudioPlayer
+                src="/pathe-voice-demo.mp3"
+                logoSrc="/pathe-logo.png"
+                title="Pathé Newsreel Voice Demo"
+                subtitle="Voice Demo — Guy Harris"
+              />
+            </div>
+
+            {/* Aston Villa Short — stacks first on mobile, right on desktop */}
+            <div className="order-first md:order-last shrink-0 w-full max-w-[270px] mx-auto md:mx-0">
+              <div className="vintage-border overflow-hidden bg-card">
+                <div className="aspect-[9/16]">
+                  <iframe
+                    src="https://www.youtube.com/embed/Lp4lZUcdQ_w"
+                    title="Aston Villa — Official Pathé Voiceover by Guy Harris"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <p className="font-newsreel text-base tracking-widest text-accent">ASTON VILLA</p>
+                <p className="font-serif text-xs text-muted-foreground uppercase tracking-widest mt-0.5">Official Voiceover</p>
+              </div>
+            </div>
+
           </div>
           
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-description">
