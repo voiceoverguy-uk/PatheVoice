@@ -1,0 +1,102 @@
+12:56:04.531 Running build in Washington, D.C., USA (East) – iad1
+12:56:04.531 Build machine configuration: 2 cores, 8 GB
+12:56:04.846 Cloning github.com/voiceoverguy-uk/PatheVoice (Branch: main, Commit: c5ca841)
+12:56:04.847 Previous build caches not available.
+12:56:05.560 Cloning completed: 714.000ms
+12:56:05.846 Running "vercel build"
+12:56:05.868 Vercel CLI 54.4.1
+12:56:07.080 Running "install" command: `npm install`...
+12:56:16.656 
+12:56:16.657 added 341 packages, and audited 342 packages in 9s
+12:56:16.657 
+12:56:16.658 50 packages are looking for funding
+12:56:16.658   run `npm fund` for details
+12:56:16.674 
+12:56:16.675 12 vulnerabilities (7 moderate, 5 high)
+12:56:16.675 
+12:56:16.676 To address all issues, run:
+12:56:16.676   npm audit fix
+12:56:16.676 
+12:56:16.676 Run `npm audit` for details.
+12:56:16.953 
+12:56:16.954 > rest-express@1.0.0 build
+12:56:16.954 > vite build
+12:56:16.954 
+12:56:17.158 vite v5.4.19 building for production...
+12:56:17.229 transforming...
+12:56:17.490 Browserslist: browsers data (caniuse-lite) is 19 months old. Please run:
+12:56:17.490   npx update-browserslist-db@latest
+12:56:17.490   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+12:56:20.998 ✓ 1686 modules transformed.
+12:56:21.280 rendering chunks...
+12:56:21.291 computing gzip size...
+12:56:21.307 ../dist/index.html                  12.54 kB │ gzip:   2.65 kB
+12:56:21.308 ../dist/assets/index-DoiRwRgQ.css   84.56 kB │ gzip:  13.80 kB
+12:56:21.308 ../dist/assets/index-msb2OdKX.js   414.71 kB │ gzip: 126.50 kB
+12:56:21.308 ✓ built in 4.13s
+12:56:21.914 BEWARE: your OS is not officially supported by Playwright; downloading fallback build for ubuntu24.04-x64.
+12:56:21.916 Downloading Chrome for Testing 147.0.7727.15 (playwright chromium v1217) from https://cdn.playwright.dev/builds/cft/147.0.7727.15/linux64/chrome-linux64.zip
+12:56:22.706 |                                                                                |   0% of 170.4 MiB
+12:56:22.886 |■■■■■■■■                                                                        |  10% of 170.4 MiB
+12:56:23.009 |■■■■■■■■■■■■■■■■                                                                |  20% of 170.4 MiB
+12:56:23.131 |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 170.4 MiB
+12:56:23.214 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 170.4 MiB
+12:56:23.297 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 170.4 MiB
+12:56:23.372 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 170.4 MiB
+12:56:23.444 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 170.4 MiB
+12:56:23.521 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 170.4 MiB
+12:56:23.685 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 170.4 MiB
+12:56:23.762 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 170.4 MiB
+12:56:26.966 Chrome for Testing 147.0.7727.15 (playwright chromium v1217) downloaded to /vercel/.cache/ms-playwright/chromium-1217
+12:56:26.967 BEWARE: your OS is not officially supported by Playwright; downloading fallback build for ubuntu24.04-x64.
+12:56:26.968 Downloading FFmpeg (playwright ffmpeg v1011) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+12:56:27.766 |                                                                                |   0% of 2.3 MiB
+12:56:27.772 |■■■■■■■■                                                                        |  10% of 2.3 MiB
+12:56:27.774 |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+12:56:27.781 |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+12:56:27.784 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+12:56:27.786 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+12:56:27.787 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+12:56:27.793 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+12:56:27.793 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+12:56:27.794 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+12:56:27.797 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+12:56:27.857 FFmpeg (playwright ffmpeg v1011) downloaded to /vercel/.cache/ms-playwright/ffmpeg-1011
+12:56:27.859 BEWARE: your OS is not officially supported by Playwright; downloading fallback build for ubuntu24.04-x64.
+12:56:27.860 Downloading Chrome Headless Shell 147.0.7727.15 (playwright chromium-headless-shell v1217) from https://cdn.playwright.dev/builds/cft/147.0.7727.15/linux64/chrome-headless-shell-linux64.zip
+12:56:28.634 |                                                                                |   0% of 112 MiB
+12:56:28.765 |■■■■■■■■                                                                        |  10% of 112 MiB
+12:56:28.842 |■■■■■■■■■■■■■■■■                                                                |  20% of 112 MiB
+12:56:28.931 |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 112 MiB
+12:56:29.010 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 112 MiB
+12:56:29.085 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 112 MiB
+12:56:29.140 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 112 MiB
+12:56:29.200 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 112 MiB
+12:56:29.249 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 112 MiB
+12:56:29.299 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 112 MiB
+12:56:29.342 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 112 MiB
+12:56:31.394 Chrome Headless Shell 147.0.7727.15 (playwright chromium-headless-shell v1217) downloaded to /vercel/.cache/ms-playwright/chromium_headless_shell-1217
+12:56:31.721 Starting vite preview server...
+12:56:32.194   ➜  Local:   http://127.0.0.1:4173/
+12:56:32.442 Vite preview ready on http://127.0.0.1:4173
+12:56:32.691 Pre-rendering failed: browserType.launch: Target page, context or browser has been closed
+12:56:32.692 Browser logs:
+12:56:32.693 
+12:56:32.693 <launching> /vercel/.cache/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/playwright_chromiumdev_profile-6E7Esy --remote-debugging-pipe --no-startup-window
+12:56:32.693 <launched> pid=313
+12:56:32.694 [pid=313][err] /vercel/.cache/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libnspr4.so: cannot open shared object file: No such file or directory
+12:56:32.694 Call log:
+12:56:32.697   - <launching> /vercel/.cache/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/playwright_chromiumdev_profile-6E7Esy --remote-debugging-pipe --no-startup-window
+12:56:32.698   - <launched> pid=313
+12:56:32.698   - [pid=313][err] /vercel/.cache/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libnspr4.so: cannot open shared object file: No such file or directory
+12:56:32.698   - [pid=313] <gracefully close start>
+12:56:32.698   - [pid=313] <kill>
+12:56:32.698   - [pid=313] <will force kill>
+12:56:32.698   - [pid=313] exception while trying to kill process: Error: kill ESRCH
+12:56:32.698   - [pid=313] <process did exit: exitCode=127, signal=null>
+12:56:32.698   - [pid=313] starting temporary directories cleanup
+12:56:32.698   - [pid=313] finished temporary directories cleanup
+12:56:32.699   - [pid=313] <gracefully close end>
+12:56:32.699 
+12:56:32.699     at prerender (/vercel/path0/prerender.mjs:44:36)
+12:56:32.711 Error: Command "npm run build && npx playwright install chromium && node prerender.mjs" exited with 1
