@@ -31,13 +31,20 @@ export default function HeroSection() {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 max-w-5xl mx-auto">
 
             {/* Audio player — stacks second on mobile, left on desktop */}
-            <div className="order-last md:order-first flex-1 w-full min-w-0">
-              <AudioPlayer
-                src="/pathe-voice-demo.mp3"
-                logoSrc="/pathe-logo.png"
-                title="Pathé Newsreel Voice Demo"
-                subtitle="Voice Demo — Guy Harris"
-              />
+            <div className="order-last md:order-first shrink-0 w-full max-w-[270px] mx-auto md:mx-0">
+              <div className="vintage-border overflow-hidden bg-card">
+                <AudioPlayer
+                  src="/pathe-voice-demo.mp3"
+                  logoSrc="/pathe-logo.png"
+                  title="Pathé Newsreel Voice Demo"
+                  subtitle="Voice Demo — Guy Harris"
+                  portrait
+                />
+              </div>
+              <div className="mt-3 text-center">
+                <p className="font-newsreel text-base tracking-widest text-accent">PATHÉ VOICE DEMO</p>
+                <p className="font-serif text-xs text-muted-foreground uppercase tracking-widest mt-0.5">Voice Demo — Guy Harris</p>
+              </div>
             </div>
 
             {/* Aston Villa Short — stacks first on mobile, right on desktop */}

@@ -5,6 +5,7 @@ interface AudioPlayerProps {
   title: string;
   subtitle?: string;
   logoSrc: string;
+  portrait?: boolean;
 }
 
 function formatTime(t: number) {
@@ -14,7 +15,7 @@ function formatTime(t: number) {
   return `${m}:${s}`;
 }
 
-export default function AudioPlayer({ src, title, subtitle, logoSrc }: AudioPlayerProps) {
+export default function AudioPlayer({ src, title, subtitle, logoSrc, portrait = false }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const waveformRef = useRef<number[]>([]);
@@ -36,7 +37,7 @@ export default function AudioPlayer({ src, title, subtitle, logoSrc }: AudioPlay
         if (cancelled) return;
 
         const raw = decoded.getChannelData(0);
-        const BARS = 120;
+        const BARS = portrait ? 60 : 120;
         const block = Math.floor(raw.length / BARS);
         const samples: number[] = [];
         for (let i = 0; i < BARS; i++) {
@@ -47,7 +48,8 @@ export default function AudioPlayer({ src, title, subtitle, logoSrc }: AudioPlay
         const max = Math.max(...samples, 0.001);
         waveformRef.current = samples.map((v) => v / max);
       } catch {
-        waveformRef.current = Array.from({ length: 120 }, (_, i) =>
+        const BARS = portrait ? 60 : 120;
+        waveformRef.current = Array.from({ length: BARS }, (_, i) =>
           0.3 + 0.5 * Math.abs(Math.sin(i * 0.4)) + 0.2 * Math.random()
         );
       }
@@ -55,7 +57,7 @@ export default function AudioPlayer({ src, title, subtitle, logoSrc }: AudioPlay
     }
     buildWaveform();
     return () => { cancelled = true; };
-  }, [src]);
+  }, [src, portrait]);
 
   const draw = useCallback((progress: number) => {
     const canvas = canvasRef.current;
@@ -139,7 +141,99 @@ export default function AudioPlayer({ src, title, subtitle, logoSrc }: AudioPlay
     if (audioRef.current) audioRef.current.volume = v;
   };
 
-  const progress = duration ? currentTime / duration : 0;
+  const PlayIcon = () => (
+    <svg width="18" height="20" viewBox="0 0 13 14" fill="currentColor" style={{ marginLeft: "3px" }}>
+      <path d="M1.5 1.5l10 5.5-10 5.5z" />
+    </svg>
+  );
+
+  const PauseIcon = () => (
+    <svg width="16" height="20" viewBox="0 0 13 14" fill="currentColor">
+      <rect x="1" y="1" width="4" height="12" rx="1.5" />
+      <rect x="8" y="1" width="4" height="12" rx="1.5" />
+    </svg>
+  );
+
+  if (portrait) {
+    return (
+      <div className="bg-[#0A0A0A] border border-accent/25 rounded-2xl p-5 shadow-xl flex flex-col items-center h-full">
+        {/* Logo */}
+        <img
+          src={logoSrc}
+          alt="Pathé logo"
+          className="w-24 h-24 object-contain mb-4 mt-2"
+        />
+
+        {/* Title */}
+        <div className="text-center mb-5 px-2">
+          {subtitle && (
+            <p className="text-xs uppercase tracking-widest text-accent/70 font-serif mb-1">
+              {subtitle}
+            </p>
+          )}
+          <h3 className="font-newsreel text-xl tracking-wider text-white leading-tight">
+            {title}
+          </h3>
+        </div>
+
+        {/* Waveform */}
+        <canvas
+          ref={canvasRef}
+          width={220}
+          height={160}
+          className="w-full cursor-pointer mb-5 rounded"
+          style={{ height: "160px" }}
+          onClick={handleCanvasClick}
+        />
+
+        {/* Large play button */}
+        <button
+          onClick={togglePlay}
+          aria-label={isPlaying ? "Pause" : "Play"}
+          className="w-16 h-16 rounded-full bg-accent text-[#141414] flex items-center justify-center hover:bg-accent/80 transition-colors shadow-lg mb-4"
+        >
+          {isPlaying ? <PauseIcon /> : <PlayIcon />}
+        </button>
+
+        {/* Time */}
+        <span className="text-sm font-mono text-white/50 tabular-nums mb-4">
+          {formatTime(currentTime)} / {formatTime(duration)}
+        </span>
+
+        {/* Volume */}
+        <div className="flex items-center gap-2 w-full justify-center mt-auto">
+          <svg
+            width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" strokeWidth="2"
+            className="text-white/40 shrink-0"
+          >
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            {volume > 0 && <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />}
+            {volume > 0.5 && <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />}
+          </svg>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolumeChange}
+            className="w-28 cursor-pointer accent-[#FFB800]"
+            aria-label="Volume"
+          />
+        </div>
+
+        <audio
+          ref={audioRef}
+          src={src}
+          onTimeUpdate={handleTimeUpdate}
+          onLoadedMetadata={handleLoadedMetadata}
+          onEnded={handleEnded}
+          preload="metadata"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#0A0A0A] border border-accent/25 rounded-2xl p-6 md:p-8 shadow-xl">
