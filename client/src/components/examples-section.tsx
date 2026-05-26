@@ -36,8 +36,8 @@ export default function ExamplesSection() {
           <div className="vintage-border p-4 bg-card" data-testid="video-container-2">
             <div className="mb-4">
               <iframe 
-                src="https://www.youtube.com/embed/ArEJtd9c6Uw" 
-                title="Pathé News Voiceover - Guy Harris Demo 2"
+                src="https://www.youtube.com/embed/Lp4lZUcdQ_w" 
+                title="Aston Villa — Official Pathé Voiceover by Guy Harris"
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
@@ -46,18 +46,18 @@ export default function ExamplesSection() {
               />
             </div>
             <h3 className="font-newsreel text-xl tracking-wide mb-2" data-testid="video-title-2">
-              EVERTON PATHÉ VOICEOVER
+              ASTON VILLA SHORT
             </h3>
             <p className="font-serif text-muted-foreground" data-testid="video-description-2">
-              Sports newsreel style application
+              Premier League football in the Pathé style
             </p>
           </div>
 
           <div className="vintage-border p-4 bg-card" data-testid="video-container-3">
             <div className="mb-4">
               <iframe 
-                src="https://www.youtube.com/embed/Lp4lZUcdQ_w" 
-                title="Aston Villa — Official Pathé Voiceover by Guy Harris"
+                src="https://www.youtube.com/embed/ArEJtd9c6Uw" 
+                title="Pathé News Voiceover - Guy Harris Demo 2"
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
@@ -66,10 +66,10 @@ export default function ExamplesSection() {
               />
             </div>
             <h3 className="font-newsreel text-xl tracking-wide mb-2" data-testid="video-title-3">
-              ASTON VILLA SHORT
+              EVERTON PATHÉ VOICEOVER
             </h3>
             <p className="font-serif text-muted-foreground" data-testid="video-description-3">
-              Premier League football in the Pathé style
+              Sports newsreel style application
             </p>
           </div>
         </div>

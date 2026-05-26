@@ -32,7 +32,7 @@ export default function HeroSection() {
 
             {/* Audio player — stacks second on mobile, left on desktop */}
             <div className="order-last md:order-first shrink-0 w-full max-w-[270px] mx-auto md:mx-0">
-              <div className="vintage-border overflow-hidden bg-card">
+              <div className="vintage-border overflow-hidden bg-card aspect-[9/16]">
                 <AudioPlayer
                   src="/pathe-voice-demo.mp3"
                   logoSrc="/pathe-logo.png"
