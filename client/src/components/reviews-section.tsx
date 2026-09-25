@@ -2,7 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { Star } from "lucide-react";
 
 const FALLBACK = { rating: 5.0, reviewCount: 120 };
-const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/?q=place_id:ChIJL1W4QyVneUgRBV8j4XrOzaM";
+// Exact googleMapsLinks.reviewsUri from Places API (New), verified against VoiceoverGuy's name and website.
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place//data=!4m4!3m3!1s0x4879672543b8552f:0xa3cdce7ae1235f05!9m1!1b1?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA";
 
 export default function ReviewsSection() {
   const { data } = useQuery<{ rating: number; reviewCount: number }>({

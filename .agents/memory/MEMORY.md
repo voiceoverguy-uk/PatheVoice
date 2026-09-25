@@ -1,0 +1,1 @@
+- [Google reviews verification](google-reviews-verification.md) — official review URLs can still encounter Google's signed-out limited view; report desktop and mobile results separately.
